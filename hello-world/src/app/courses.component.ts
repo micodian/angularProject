@@ -5,10 +5,11 @@ import{ Component } from '@angular/core';
     //add properties of this component
     //anywhere there is an element for courses, angular would render the template
     selector: 'courses',
-    template: '<h2>Courses</h2>'
+    template: '<h2>{{ title }}</h2>'
 
 
 })
 export class CoursesComponent{
-
+    //adding a field
+    title = "List of courses";
 }
