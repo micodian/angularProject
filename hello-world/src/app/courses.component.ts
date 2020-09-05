@@ -7,14 +7,15 @@ import{ Component } from '@angular/core';
     //anywhere there is an element for courses, angular would render the template
     //using string interpolation
     selector: 'courses',
-    template: `
-    <h2>{{ title }}</h2>
-    <ul>
-        <li *ngFor = "let course of courses">
-            {{ course }}
-        </li>
-    </ul>
-    <img src="{{ imageUrl }}" />
+    template: `    
+    <img [src]= "imageUrl" />
+    <table>
+        <tr>
+            <td [attr.colspan]="colSpan"></td>
+
+        </tr>
+
+    </table>
 
     `
 
@@ -25,7 +26,7 @@ export class CoursesComponent{
     title = "List of courses";
     courses;
     imageUrl = "http://lorempixel.com/400/200"
-
+    colSpan =2;
     //constructor to create an instance of courses service
     //creating an object
     constructor(service: CoursesService){
