@@ -14,6 +14,7 @@ import{ Component } from '@angular/core';
             {{ course }}
         </li>
     </ul>
+    <img src="{{ imageUrl }}" />
 
     `
 
@@ -23,6 +24,7 @@ export class CoursesComponent{
     //adding a field
     title = "List of courses";
     courses;
+    imageUrl = "http://lorempixel.com/400/200"
 
     //constructor to create an instance of courses service
     //creating an object
